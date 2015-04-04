@@ -1,0 +1,82 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="true" />
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/BuildConfig.groovy" timestamp="1425869189520">
+        <mark key="]" line="15" column="47" />
+        <mark key="." line="15" column="47" />
+        <mark key="[" line="15" column="47" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1427251474185">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/BootStrap.groovy" timestamp="1428016663167">
+        <mark key="a" line="23" column="33" />
+        <mark key="]" line="24" column="31" />
+        <mark key="." line="24" column="31" />
+        <mark key="[" line="24" column="31" />
+        <mark key="x" line="31" column="32" />
+      </file>
+      <file name="/a.dummy" timestamp="1427251426098">
+        <mark key="[" line="0" column="0" />
+      </file>
+    </filemarks>
+    <jumps />
+    <registers>
+      <register name="3" type="4">
+        <text />
+      </register>
+      <register name="&quot;" type="4">
+        <text>ex</text>
+      </register>
+      <register name="2" type="4">
+        <text>= Environment.DEVELOPMENT) {
+            String username = 'e</text>
+      </register>
+      <register name="1" type="4">
+        <text>ex</text>
+      </register>
+      <register name="7" type="4">
+        <text>h</text>
+      </register>
+      <register name="6" type="4">
+        <text>update</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICAgICAgZW1haWw6ICJ0ZXN0QGV4YS5jb20iKQo=</text>
+      </register>
+      <register name="4" type="4">
+        <text>: springSecurityService.encodePassword(&quot;password&quot;),
+                testUser.save(flu</text>
+      </register>
+      <register name="9" type="4">
+        <text>t</text>
+      </register>
+      <register name="8" type="4">
+        <text encoding="base64">IA==</text>
+      </register>
+      <register name="-" type="4">
+        <text>ex</text>
+      </register>
+    </registers>
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search />
+      <history-cmd />
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed W</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+    <editor>
+      <key-repeat enabled="true" />
+    </editor>
+  </component>
+</application>
