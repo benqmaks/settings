@@ -8,6 +8,11 @@
         <mark key="." line="15" column="47" />
         <mark key="[" line="15" column="47" />
       </file>
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/src/groovy/com/exa/util/GrailsConfigManager.groovy" timestamp="1428271594611">
+        <mark key="]" line="69" column="77" />
+        <mark key="." line="69" column="77" />
+        <mark key="[" line="83" column="64" />
+      </file>
       <file name="/Dummy.txt" timestamp="1427251474185">
         <mark key="[" line="0" column="0" />
       </file>
@@ -18,43 +23,46 @@
         <mark key="[" line="24" column="31" />
         <mark key="x" line="31" column="32" />
       </file>
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/Config.groovy" timestamp="1428271546775">
+        <mark key="n" line="253" column="21" />
+      </file>
     </filemarks>
     <jumps />
     <registers>
       <register name="3" type="4">
-        <text />
+        <text>_</text>
       </register>
-      <register name="&quot;" type="4">
-        <text>ex</text>
+      <register name="&quot;" type="2">
+        <text encoding="base64">Z3JhaWxzLnBsdWdpbi5zcHJpbmdzZWN1cml0eS5sZGFwLmF1dGhvcml0aWVzcmV0cmlldmVHcm91cFJvbGVzID0gR3JhaWxzQ29uZmlnTWFuYWdlci5nZXRCb29sZWFuKG9wdGlvbltFeHRlcm5hbENvbmZpZ1R5cGUuTERBUF9BVVRIT1JJVElFU19SRVRSSUVWRUdST1VQUk9MRVMudmFsdWVdKQpncmFpbHMucGx1Z2luLnNwcmluZ3NlY3VyaXR5LmxkYXAuYXV0aG9yaXRpZXMuZGVmYXVsdFJvbGUgPSBvcHRpb25bRXh0ZXJuYWxDb25maWdUeXBlLkxEQVBfQVVUSE9SSVRJRVNfREVGQVVMVFJPTEUudmFsdWVdCg==</text>
       </register>
       <register name="2" type="4">
-        <text>= Environment.DEVELOPMENT) {
-            String username = 'e</text>
+        <text>.</text>
       </register>
-      <register name="1" type="4">
-        <text>ex</text>
+      <register name="1" type="2">
+        <text encoding="base64">Z3JhaWxzLnBsdWdpbi5zcHJpbmdzZWN1cml0eS5sZGFwLmF1dGhvcml0aWVzcmV0cmlldmVHcm91cFJvbGVzID0gR3JhaWxzQ29uZmlnTWFuYWdlci5nZXRCb29sZWFuKG9wdGlvbltFeHRlcm5hbENvbmZpZ1R5cGUuTERBUF9BVVRIT1JJVElFU19SRVRSSUVWRUdST1VQUk9MRVMudmFsdWVdKQpncmFpbHMucGx1Z2luLnNwcmluZ3NlY3VyaXR5LmxkYXAuYXV0aG9yaXRpZXMuZGVmYXVsdFJvbGUgPSBvcHRpb25bRXh0ZXJuYWxDb25maWdUeXBlLkxEQVBfQVVUSE9SSVRJRVNfREVGQVVMVFJPTEUudmFsdWVdCg==</text>
       </register>
       <register name="7" type="4">
-        <text>h</text>
-      </register>
-      <register name="6" type="4">
-        <text>update</text>
-      </register>
-      <register name="5" type="2">
-        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICAgICAgZW1haWw6ICJ0ZXN0QGV4YS5jb20iKQo=</text>
-      </register>
-      <register name="4" type="4">
         <text>: springSecurityService.encodePassword(&quot;password&quot;),
                 testUser.save(flu</text>
       </register>
-      <register name="9" type="4">
-        <text>t</text>
+      <register name="6" type="4">
+        <text />
       </register>
-      <register name="8" type="4">
-        <text encoding="base64">IA==</text>
+      <register name="5" type="4">
+        <text>= Environment.DEVELOPMENT) {
+            String username = 'e</text>
+      </register>
+      <register name="4" type="4">
+        <text>ex</text>
+      </register>
+      <register name="9" type="4">
+        <text>update</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICAgICAgZW1haWw6ICJ0ZXN0QGV4YS5jb20iKQo=</text>
       </register>
       <register name="-" type="4">
-        <text>ex</text>
+        <text>.</text>
       </register>
     </registers>
     <search>
@@ -70,6 +78,9 @@
     <shortcut-conflicts>
       <shortcut-conflict owner="ide">
         <text>ctrl pressed W</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed M</text>
       </shortcut-conflict>
     </shortcut-conflicts>
     <editor>
