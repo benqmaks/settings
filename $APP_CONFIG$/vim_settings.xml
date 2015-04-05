@@ -21,11 +21,11 @@
     </filemarks>
     <jumps />
     <registers>
-      <register name="3" type="4">
-        <text />
-      </register>
       <register name="&quot;" type="4">
         <text>ex</text>
+      </register>
+      <register name="3" type="4">
+        <text />
       </register>
       <register name="2" type="4">
         <text>= Environment.DEVELOPMENT) {
