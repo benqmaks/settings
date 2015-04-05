@@ -1,7 +1,8 @@
 <scheme name="Darcula copy" version="124" parent_scheme="Default">
   <option name="LINE_SPACING" value="1.0" />
   <option name="EDITOR_FONT_SIZE" value="14" />
-  <option name="EDITOR_FONT_NAME" value="Menlo" />
+  <option name="CONSOLE_FONT_NAME" value="DejaVu Sans Mono" />
+  <option name="EDITOR_FONT_NAME" value="Source Code Pro" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="295622" />
     <option name="ANNOTATIONS_COLOR" value="8b999f" />
@@ -208,6 +209,9 @@
         <option name="FOREGROUND" value="4646f1" />
       </value>
     </option>
+    <option name="DEFAULT_COMMA">
+      <value />
+    </option>
     <option name="DEFAULT_CONSTANT">
       <value>
         <option name="FOREGROUND" value="9876aa" />
@@ -275,6 +279,9 @@
       <value>
         <option name="FOREGROUND" value="6897bb" />
       </value>
+    </option>
+    <option name="DEFAULT_SEMICOLON">
+      <value />
     </option>
     <option name="DEFAULT_STATIC_FIELD">
       <value>
