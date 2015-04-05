@@ -11,7 +11,7 @@
       <file name="/Dummy.txt" timestamp="1427251474185">
         <mark key="[" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/BootStrap.groovy" timestamp="1428016663167">
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/BootStrap.groovy" timestamp="1428265269305">
         <mark key="a" line="23" column="33" />
         <mark key="]" line="24" column="31" />
         <mark key="." line="24" column="31" />
@@ -21,11 +21,11 @@
     </filemarks>
     <jumps />
     <registers>
-      <register name="&quot;" type="4">
-        <text>ex</text>
-      </register>
       <register name="3" type="4">
         <text />
+      </register>
+      <register name="&quot;" type="4">
+        <text>ex</text>
       </register>
       <register name="2" type="4">
         <text>= Environment.DEVELOPMENT) {
