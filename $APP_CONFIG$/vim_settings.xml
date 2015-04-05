@@ -8,20 +8,14 @@
         <mark key="." line="15" column="47" />
         <mark key="[" line="15" column="47" />
       </file>
-      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/src/groovy/com/exa/util/GrailsConfigManager.groovy" timestamp="1428275836707">
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/src/groovy/com/exa/util/GrailsConfigManager.groovy" timestamp="1428276687775">
         <mark key="]" line="65" column="81" />
         <mark key="^" line="65" column="81" />
         <mark key="." line="65" column="81" />
-        <mark key="[" line="70" column="62" />
+        <mark key="[" line="70" column="68" />
       </file>
       <file name="/Dummy.txt" timestamp="1427251474185">
         <mark key="[" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/services/com/exa/services/DirectoryFileService.groovy" timestamp="1428274054000">
-        <mark key="]" line="164" column="0" />
-        <mark key="^" line="134" column="42" />
-        <mark key="." line="164" column="0" />
-        <mark key="[" line="163" column="55" />
       </file>
       <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/BootStrap.groovy" timestamp="1428274669982">
         <mark key="a" line="23" column="33" />
@@ -30,17 +24,23 @@
         <mark key="[" line="23" column="33" />
         <mark key="x" line="31" column="32" />
       </file>
+      <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/services/com/exa/services/DirectoryFileService.groovy" timestamp="1428274054000">
+        <mark key="]" line="164" column="0" />
+        <mark key="^" line="134" column="42" />
+        <mark key="." line="164" column="0" />
+        <mark key="[" line="163" column="55" />
+      </file>
       <file name="$USER_HOME$/Work/ExaPortal/ExaService(trunk)/grails-app/conf/Config.groovy" timestamp="1428271546775">
         <mark key="n" line="253" column="21" />
       </file>
     </filemarks>
     <jumps />
     <registers>
-      <register name="3" type="4">
-        <text>H</text>
-      </register>
       <register name="&quot;" type="4">
         <text>update</text>
+      </register>
+      <register name="3" type="4">
+        <text>H</text>
       </register>
       <register name="2" type="4">
         <text>= Environment.DEVELOPMENT) {
