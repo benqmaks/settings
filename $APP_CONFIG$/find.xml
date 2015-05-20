@@ -1,5 +1,8 @@
 <application>
   <component name="FindSettings">
+    <option name="customScope" value="Directory '/home/maks/Work/ExaService(trunk)'" />
+    <option name="defaultScopeName" value="Directory '/home/maks/Work/ExaService(trunk)'" />
+    <option name="SEARCH_SCOPE" value="Directory '/home/maks/Work/ExaService(trunk)'" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
