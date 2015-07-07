@@ -1,0 +1,13 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cb96e959-6833-4d7e-bd05-32d1abd506dc" name="ExaCloud" url="http://ec2-54-85-51-234.compute-1.amazonaws.com:8080/ExaService">
+        <fileTransfer host="ec2-54-85-51-234.compute-1.amazonaws.com" port="22" privateKey="/home/maks/Downloads/Skype/exa_portal_new.ppk" rootFolder="/opt/springsource/Workspaces/trunk/ExaService" accessType="SFTP" username="ec2-user" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</application>

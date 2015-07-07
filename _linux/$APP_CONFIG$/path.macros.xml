@@ -1,5 +1,6 @@
 <application>
   <component name="PathMacrosImpl">
+    <macro name="GRAILS_ROOT" value="/home/maks/Work/Grails/grails-2.4.3" />
     <macro name="MAVEN_REPOSITORY" value="/root/.m2/repository" />
   </component>
 </application>
