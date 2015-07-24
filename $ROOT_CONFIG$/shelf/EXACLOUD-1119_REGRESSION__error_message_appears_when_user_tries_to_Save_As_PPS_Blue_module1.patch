@@ -1,0 +1,696 @@
+Index: grails-app/assets/stylesheets/app/exa-simulation.less
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/assets/stylesheets/app/exa-simulation.less	(revision 9531)
++++ grails-app/assets/stylesheets/app/exa-simulation.less	(revision )
+@@ -229,14 +229,6 @@
+     }
+ }
+ 
+-.blue-files-table{
+-  tr {
+-    display: block;
+-  }
+-  thead{
+-    height: 30px;
+-  }
+-}
+ 
+ .pps-file-edit {
+     cursor: pointer;
+@@ -376,10 +368,6 @@
+         border-width: 1px 0 1px 0;
+     }
+ }
+-table.blue-files-table {
+-    position: relative;
+-}
+-
+ .pps-blue-layouts {
+     div[class*="col-lg"] {
+         padding: 0 5px 0 5px;
+\ No newline at end of file
+Index: grails-app/assets/javascripts/app/controllers/slider.controller.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/assets/javascripts/app/controllers/slider.controller.js	(revision 9531)
++++ grails-app/assets/javascripts/app/controllers/slider.controller.js	(revision )
+@@ -114,14 +114,14 @@
+                 });
+             };
+ 
+-            $scope.saveAsPpsBlueModule = function(modulePath, moduleName, runPath, ppsBlueVersion, postRunDir) {
++            $scope.saveAsPpsBlueModule = function(modulePath, runPath, ppsBlueVersion, moduleName, postRunDir) {
+                 ModalService.showModal({
+                     modal: elements.dialogs.moduleSave,
+                     params: {
+                         modulePath: modulePath,
+-                        moduleName: moduleName,
+                         runPath: runPath,
+-                        ppsVersion: ppsBlueVersion
++                        ppsVersion: ppsBlueVersion,
++                        moduleName: moduleName
+                     }
+                 }).then(function() {
+                     $scope.updatePpsBlueForm(postRunDir, 2);
+\ No newline at end of file
+Index: grails-app/views/app/_sessionsTable.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/app/_sessionsTable.gsp	(revision 9531)
++++ grails-app/views/app/_sessionsTable.gsp	(revision )
+@@ -58,8 +58,7 @@
+             <tbody>
+                 <tr data-ng-repeat="session in vncSessions | orderBy:predicate:reverse" data-ng-hide="session.hidden"
+                     data-ng-class="session.checked ? 'checked' : ''" data-ng-click="checkSessionRow(session);"
+-                    data-ng-right-click="beforeSessionContext(session)"
+-                    on-finish-render>
++                    data-ng-right-click="beforeSessionContext(session)">
+ 
+                     <td>
+                         <label>
+Index: grails-app/services/com/exa/services/SimulationService.groovy
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/services/com/exa/services/SimulationService.groovy	(revision 9531)
++++ grails-app/services/com/exa/services/SimulationService.groovy	(revision )
+@@ -703,9 +703,10 @@
+         new File(job.jobDir + "/.exa_jobctl_status").delete()
+     }
+ 
+-    public void clearJob(jobId) {
+-        Job job = Job.get(jobId)
+-         if (new File(job.jobDir).exists()){
++    public void clearJob(Long jobID) {
++        Job job = Job.get(jobID)
++        File jobDir = new File(job.jobDir)
++         if (jobDir.exists()){
+             checkJobWritePermission(job, messageSource.getMessage('Message.Text.CantClearJob', null, LocaleContextHolder.locale))
+             if ((job.type == JobType.AUX_ZIP.value)) {
+                 directoryFileService.deleteFolder(job.jobDir)
+@@ -1073,7 +1074,7 @@
+         return module
+     }
+ 
+-    public def initPpsBlueModules(RunSettings settings){
++    public def initPpsBlueModules(RunSettings settings) {
+         File runFineDir =  new File(settings.common.runFineDir)
+         // Init Project's PPS Blue modules
+         File ppsFolder = new File(ExaFactory.getRootProjectInstance(runFineDir).path, ExaStructure.PPS_BLUE_FOLDER_NAME.value)
+@@ -1087,10 +1088,13 @@
+             dir.eachFile { File file ->
+                 String prefix = ".pps_blue_"
+                 String sufix = ".lock"
++
+                 if (file.name.startsWith(prefix) && file.name.endsWith(sufix)) {
+                     String name = ExaUtil.getFileNameWithoutExtension(file.absolutePath)
+                     name = name.substring(prefix.length())
++
+                     settings.postProcessingSettings.ppsRunModules[dir.absolutePath] = name
++
+                     if(!settings.postProcessingSettings.ppsModuleInfo.moduleName){
+                         PpsBlueModuleInfo info = new PpsBlueModuleInfo()
+                         info.moduleName = name
+Index: grails-app/views/simulation/forms/_formPpsModuleSave.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/simulation/forms/_formPpsModuleSave.gsp	(revision 9531)
++++ grails-app/views/simulation/forms/_formPpsModuleSave.gsp	(revision )
+@@ -1,4 +1,4 @@
+-<form-remote id="ppsEditForm" url="/ExaService/ProjectManager/saveAsPpsBlueModule"
++<form-remote id="ppsEditForm" url="/ExaService/Simulation/saveAsPpsBlueModule"
+              on-before="showProgressDialog()"
+              on-success="close(true)"
+              on-complete="hideProgressDialog()">
+@@ -20,7 +20,7 @@
+                 </div>
+ 
+                 <div class="col-lg-10">
+-                    <input type="text" name="name" class="form-control" maxlength="255" placeholder="PPS Blue Module name..." autofocus="" required="" value="${moduleName}"/>
++                    <input type="text" name="moduleName" class="form-control input-sm" maxlength="255" placeholder="PPS Blue Module name..." autofocus="" required="" value="${moduleName}"/>
+                 </div>
+             </div>
+         </div>
+\ No newline at end of file
+Index: grails-app/views/app/_filesTable.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/app/_filesTable.gsp	(revision 9531)
++++ grails-app/views/app/_filesTable.gsp	(revision )
+@@ -41,8 +41,7 @@
+                     data-ng-class="file.checked ? 'checked' : ''"
+                     data-ng-click="checkFileRow(file);"
+                     data-ng-right-click="beforeFileContext(file)"
+-                    data-ng-dblclick="file.type.endsWith('File')? editFile(file.path) : openFolder(file.path)"
+-                    on-finish-render>
++                    data-ng-dblclick="file.type.endsWith('File')? editFile(file.path) : openFolder(file.path)" on-finish-render>
+ 
+                     <td>
+                         <span>
+\ No newline at end of file
+Index: grails-app/views/app/_workplaceControl.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/app/_workplaceControl.gsp	(revision 9531)
++++ grails-app/views/app/_workplaceControl.gsp	(revision )
+@@ -34,6 +34,6 @@
+ 	</g:if>
+ </div>
+ 
+-<div id="monitoringJobPanel" data-ng-controller="MonitoringCtrl" ng-class="{shown: panelOpened}">
++<div id="monitoringJobPanel" data-ng-controller="MonitoringCtrl" ng-class="{ shown: panelOpened }">
+     <g:render template="../monitoringManager/jobMonitoring" />
+ </div>
+\ No newline at end of file
+Index: grails-app/views/simulation/_postPpsRunModule.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/simulation/_postPpsRunModule.gsp	(revision 9531)
++++ grails-app/views/simulation/_postPpsRunModule.gsp	(revision )
+@@ -7,55 +7,59 @@
+                 </div>
+                 <div class="panel-body" ng-init="switch = '${module.layouts[0].name}'">
+                     <g:each in="${module.layouts}" status="i_l" var="layout">
+-                        <table class="table-minimal blue-files-table" ng-show="switch == '${layout.name}'">
++                        <div class="table-wrapper" ng-show="switch == '${layout.name}'">
++                            <div class="table-wrapper-scrollable">
++                                <table class="table-minimal">
+-                            <thead>
+-                                <tr>
+-                                    <th class="th-min">
+-                                        &nbsp;
+-                                        <span>
+-                                            <label>
+-                                                <input type="checkbox" class="global-check" value="false" data-check-all-rows/>
+-                                            </label>
+-                                        </span>
+-                                    </th>
+-                                    <th class="th-min">
+-                                        &nbsp;
+-                                        <span>&nbsp;</span>
+-                                    </th>
+-                                    <th class="th-xlarge">
+-                                        Name
+-                                        <span>Name</span>
+-                                    </th>
+-                                    <th class="th-large">
+-                                        Type
+-                                        <span>Type</span>
+-                                    </th>
+-                                </tr>
+-                            </thead>
+-                            <tbody>
+-                                <g:each in="${layout.blueFiles}" status="i_f" var="file">
+-                                    <tr class="pps-file-row ${file.isChecked ? "checked" : ""}" data-on-row-click>
+-                                        <td class="td-min">
+-                                            <g:if test="${layout.name != 'Parameters'}">
++                                    <thead>
++                                        <tr>
++                                            <th class="th-min">
++                                                &nbsp;
++                                                <span>
++                                                    <label>
++                                                        <input type="checkbox" class="global-check" value="false" data-check-all-rows/>
++                                                    </label>
++                                                </span>
++                                            </th>
++                                            <th class="th-min">
++                                                &nbsp;
++                                                <span>&nbsp;</span>
++                                            </th>
++                                            <th class="th-xlarge">
++                                                Name
++                                                <span>Name</span>
++                                            </th>
++                                            <th class="th-large">
++                                                Type
++                                                <span>Type</span>
++                                            </th>
++                                        </tr>
++                                    </thead>
++                                    <tbody>
++                                        <g:each in="${layout.blueFiles}" status="i_f" var="file">
++                                            <tr class="pps-file-row ${file.isChecked ? "checked" : ""}" data-on-row-click>
++                                                <td class="td-min">
++                                                    <g:if test="${layout.name != 'Parameters'}">
+-                                                <g:checkBox type="checkbox" name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].isChecked" checked="${file.isChecked}" data-on-row-check=""/>
++                                                        <g:checkBox name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].isChecked" checked="${file.isChecked}" data-on-row-check=""/>
+-                                            </g:if>
+-                                            <g:else>
++                                                    </g:if>
++                                                    <g:else>
+-                                                <input type="hidden" name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].isChecked" value="true"/>
++                                                        <g:checkBox name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].isChecked" checked="true" class="hidden"/>
+-                                            </g:else>
+-                                        </td>
+-                                        <td class="td-min">
++                                                    </g:else>
++                                                </td>
++                                                <td class="td-min">
+-                                            <i class="glyphicon glyphicon-edit pps-file-edit" data-path="${file.path}" data-on-pps-edit-click></i>
++                                                    <i class="glyphicon glyphicon-edit pps-file-edit" data-path="${file.path}" data-ng-click="" data-on-pps-edit-click></i>
+-                                        </td>
+-                                        <td class="td-xlarge">
+-                                            <input type="hidden" name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].name" value="${file.name}"/>
+-                                            <input type="hidden" name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].path" value="${file.path}"/>
+-                                            ${file.name}
+-                                        </td>
+-                                        <td class="td-large"> BLUE </td>
+-                                    </tr>
+-                                </g:each>
+-                            </tbody>
+-                        </table>
++                                                </td>
++                                                <td class="td-xlarge">
++                                                    <input type="hidden" name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].name" value="${file.name}"/>
++                                                    <input type="hidden" name="postProcessingSettings.ppsModuleInfo.layouts[${i_l}].blueFiles[${i_f}].path" value="${file.path}"/>
++                                                    ${file.name}
++                                                </td>
++                                                <td class="td-large"> BLUE </td>
++                                            </tr>
++                                        </g:each>
++                                    </tbody>
++                                </table>
++                            </div>
++                        </div>
+                     </g:each>
+                 </div>
+             </div>
+Index: grails-app/controllers/com/exa/controls/SimulationController.groovy
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/controllers/com/exa/controls/SimulationController.groovy	(revision 9531)
++++ grails-app/controllers/com/exa/controls/SimulationController.groovy	(revision )
+@@ -72,22 +72,22 @@
+         response.sendError(200, message(code: 'Message.Text.Success') as String)
+     }
+ 
+-    def killJob() {
+-        if (params.runID) {
+-            simulationService.killJob(params.long("runID"))
++    def killJob(Long runID) {
++        if (runID) {
++            simulationService.killJob(runID)
+             response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def stopJob() {
+-        if (params.runID) {
++    def stopJob(Long runID) {
++        if (runID) {
+             int processTime = 0
+             int waitLimit = 10
+-            def jobid = params.long("runID")
+-            simulationService.stopJob(jobid)
+-            while (simulationService.updateJobInfo(jobid).status != JobStatus.FINISHED && (processTime < waitLimit)) {
++            def jobID = runID
++            simulationService.stopJob(jobID)
++            while (simulationService.updateJobInfo(jobID).status != JobStatus.FINISHED && (processTime < waitLimit)) {
+                 processTime++
+                 sleep(1000)
+             }
+@@ -97,27 +97,27 @@
+         }
+     }
+ 
+-    def changeStep() {
+-        if (params.runID && params.steps) {
+-            simulationService.changeSteps(params.long("runID"), params.long("steps"))
++    def changeStep(Long runID, Long steps) {
++        if (runID && steps) {
++            simulationService.changeSteps(runID, steps)
+             response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def resumeJob() {
+-        if (params.runID && params.steps) {
+-            simulationService.resumeJob(params.long("runID"), params.long("steps"))
++    def resumeJob(Long runID, Long steps) {
++        if (runID && steps) {
++            simulationService.resumeJob(runID, steps)
+             response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def clearJob() {
+-        if (params.runID) {
+-            simulationService.clearJob(params.runID)
++    def clearJob(Long runID) {
++        if (runID) {
++            simulationService.clearJob(runID)
+             response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+@@ -133,25 +133,25 @@
+         }
+     }
+ 
+-    def generateSummaryFile() {
+-        if (params.path) {
+-            ProjectSettings projectSettings = ExaFactory.getProjectSettingsByPath(params.path.toString())
+-            cdiSummaryService.generateCdiSummaryFile(params.path.toString(), projectSettings.flowVersion)
++    def generateSummaryFile(String path) {
++        if (path) {
++            ProjectSettings projectSettings = ExaFactory.getProjectSettingsByPath(path)
++            cdiSummaryService.generateCdiSummaryFile(path, projectSettings.flowVersion)
+             response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def generateSummaryFileAndRender() {
+-        if (params.file && params.path && params.type) {
+-            String type = ExaUtil.GetStringifySimulationType(RunType.values().find {
+-                it.value == params.type.toInteger()
++    def generateSummaryFileAndRender(String file, String path, Integer type) {
++        if (file && path && type) {
++            String simType = ExaUtil.GetStringifySimulationType(RunType.values().find {
++                it.value == type
+             })
+             RunSettings settings = new RunSettings()
+-            ProjectSettings projectSettings = ExaFactory.getProjectSettingsByPath(params.path.toString())
+-            cdiSummaryService.generateCdiSummaryFile(params.file.toString(), projectSettings.flowVersion)
+-            simulationService.InitSimulationByDir(settings, params.path.toString(), type)
++            ProjectSettings projectSettings = ExaFactory.getProjectSettingsByPath(path)
++            cdiSummaryService.generateCdiSummaryFile(file, projectSettings.flowVersion)
++            simulationService.InitSimulationByDir(settings, path, simType)
+ 
+             render(view: 'index', model: [Settings: settings])
+         } else {
+@@ -169,39 +169,47 @@
+         }
+     }
+ 
+-    def deleteModule() {
+-        if (params.path) {
+-            directoryFileService.deleteFolder(params.path.toString())
+-            response.sendError(200, message(code: 'Message.Text.Success').toString())
++    def deleteModule(String path) {
++        if (path) {
++            directoryFileService.deleteFolder(path)
++            response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+-            response.sendError(501, message(code: 'Message.Text.MissingParameters').toString())
++            response.sendError(501, message(code: 'Message.Text.MissingParameters')as String)
+         }
+     }
+ 
+-    def savePpsBlueModule() {
+-        if (params.modulePath && params.runPath && params.ppsVersion) {
++    def savePpsBlueModule(String modulePath, String runPath, String ppsVersion) {
++        if (modulePath && runPath && ppsVersion) {
+             String dirToSavePath = null  // should get it from Run/Project structure(.pps_blue_settings)
+-            Project project = ExaFactory.getRootProjectInstance(new File(params.runPath.toString()))
++            File runDir = new File(runPath)
++
++            Project project = ExaFactory.getRootProjectInstance(runDir)
++
+             if (project != null)
+                 dirToSavePath = project.getPpsBlueSettingsFolder()
+-            postProcessingService.savePpsBlueModule(params.ppsVersion.toString(), params.modulePath.toString(), dirToSavePath, params.runPath.toString(), null)
+-            response.sendError(200, message(code: 'Message.Text.Success').toString())
++
++            postProcessingService.savePpsBlueModule(ppsVersion, modulePath, dirToSavePath, runPath, null)
++            response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+-            response.sendError(501, message(code: 'Message.Text.MissingParameters').toString())
++            response.sendError(501, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def saveAsPpsBlueModule() {
+-        if (params.modulePath && params.runPath && params.ppsVersion && params.name) {
+-            directoryFileService.checkFileName(params.name.toString())
++    def saveAsPpsBlueModule(String modulePath, String runPath, String ppsVersion, String moduleName) {
++        if (modulePath && runPath && ppsVersion && moduleName) {
++            directoryFileService.checkFileName(moduleName)
+             String dirToSavePath = null  // should get it from Run/Project structure(.pps_blue_settings)
+-            Project project = ExaFactory.getRootProjectInstance(new File(params.runPath.toString()))
++            File runDir = new File(runPath)
++
++            Project project = ExaFactory.getRootProjectInstance(runDir)
++
+             if (project != null)
+                 dirToSavePath = project.getPpsBlueSettingsFolder()
+-            postProcessingService.savePpsBlueModule(params.ppsVersion.toString(), params.modulePath.toString(), dirToSavePath, params.runPath.toString(), params.name.toString())
+-            response.sendError(200, message(code: 'Message.Text.Success').toString())
++
++            postProcessingService.savePpsBlueModule(ppsVersion, modulePath, dirToSavePath, runPath, moduleName)
++            response.sendError(200, message(code: 'Message.Text.Success') as String)
+         } else {
+-            response.sendError(501, message(code: 'Message.Text.MissingParameters').toString())
++            response.sendError(501, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+@@ -229,30 +237,30 @@
+         }
+     }
+ 
+-    def renderModule(String path, String runDir, RunType type) {
+-        if (path && runDir && type) {
++    def renderModule(String path, String runDir ) {
++        if (path && runDir && params.type) {
+             File moduleDir = new File(path)
+             PpsBlueModuleInfo info = simulationService.getPpsBlueModuleInfo(moduleDir)
+-            info = simulationService.loadPpsBlueModuleInfo(info, runDir, type)
++            info = simulationService.loadPpsBlueModuleInfo(info, runDir, params.type as RunType)
+             render(template: 'postPpsRunModule', model: [module: info])
+         } else {
+-            response.sendError(501, message(code: 'Message.Text.MissingParameters').toString())
++            response.sendError(501, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def renderModuleInitForm() {
+-        if (params.modulePath && params.runPath && params.ppsVersion) {
+-            render(template: 'forms/formPpsModuleInit', model: [modulePath: params.modulePath, runPath: params.runPath, ppsVersion: params.ppsVersion])
++    def renderModuleInitForm(String modulePath, String runPath, String ppsVersion) {
++        if (modulePath && runPath && ppsVersion) {
++            render(template: 'forms/formPpsModuleInit', model: [modulePath: modulePath, runPath: runPath, ppsVersion: ppsVersion])
+         } else {
+-            response.sendError(501, message(code: 'Message.Text.MissingParameters').toString())
++            response.sendError(501, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def renderModuleSaveForm() {
+-        if (params.modulePath && params.runPath && params.ppsVersion && params.moduleName) {
+-            render(template: 'forms/formPpsModuleSave', model: [modulePath: params.modulePath, runPath: params.runPath, ppsVersion: params.ppsVersion, moduleName: params.moduleName])
++    def renderModuleSaveForm(String modulePath, String runPath, String ppsVersion, String moduleName) {
++        if (modulePath && runPath && ppsVersion && moduleName) {
++            render(template: 'forms/formPpsModuleSave', model: [modulePath: modulePath, runPath: runPath, ppsVersion: ppsVersion, moduleName: moduleName])
+         } else {
+-            response.sendError(501, message(code: 'Message.Text.MissingParameters').toString())
++            response.sendError(501, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+@@ -260,9 +268,9 @@
+         render(template: 'forms/formPostTemplates')
+     }
+ 
+-    def renderChangeStepsForm() {
+-        if (params.runID) {
+-            Job job = Job.get(params.long("runID"))
++    def renderChangeStepsForm(Long runID) {
++        if (runID) {
++            Job job = Job.get(runID)
+             if (job) {
+                 simulationService.updateSimulationJobStatus(job, null)
+                 render(template: "forms/formStepChange", model: [jobInstance: job])
+@@ -274,9 +282,9 @@
+         }
+     }
+ 
+-    def renderJobResumeForm() {
+-        if (params.runID) {
+-            Job job = Job.get(params.long("runID"))
++    def renderJobResumeForm(Long runID) {
++        if (runID) {
++            Job job = Job.get(runID)
+             if (job) {
+                 simulationService.updateSimulationJobStatus(job, null)
+                 render(template: "forms/formJobResume", model: [jobInstance: job])
+@@ -288,35 +296,35 @@
+         }
+     }
+ 
+-    def renderPpsEditForm() {
+-        if (params.path) {
+-            String content = directoryFileService.getFileContentForEditing(params.path.toString())
+-            render(template: "forms/formPpsEdit", model: [content: content, path: params.path])
++    def renderPpsEditForm(String path) {
++        if (path) {
++            String content = directoryFileService.getFileContentForEditing(path)
++            render(template: "forms/formPpsEdit", model: [content: content, path: path])
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def renderUploadPostForm() {
+-        if (params.path) {
+-            render(template: 'forms/formPostUpload', model: [path: params.path])
++    def renderUploadPostForm(String path) {
++        if (path) {
++            render(template: 'forms/formPostUpload', model: [path: path])
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def renderUploadAutostopForm() {
+-        if (params.path) {
+-            render(template: 'forms/formAutostopUpload', model: [path: params.path])
++    def renderUploadAutostopForm(String path) {
++        if (path) {
++            render(template: 'forms/formAutostopUpload', model: [path: path])
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+         }
+     }
+ 
+-    def renderPostFacesForm() {
+-        if (params.runDir) {
++    def renderPostFacesForm(String runDir) {
++        if (runDir) {
+             String summaryFile = null
+-            new File(params.runDir.toString()).eachFile { file ->
++            new File(runDir).eachFile { file ->
+                 if (file.name.endsWith(".cdisum")) {
+                     summaryFile = file.getAbsolutePath()
+                     return true
+@@ -334,7 +342,7 @@
+ 
+                 render(template: 'forms/formPostFaces', model: [parts: parts, excluded: excluded])
+             } else {
+-                throw new ExaException(message(code: 'Message.Text.CDISummaryFileNotFound', args: [params.runDir.toString()]).toString())
++                throw new ExaException(message(code: 'Message.Text.CDISummaryFileNotFound', args: [runDir]) as String)
+             }
+         } else {
+             response.sendError(400, message(code: 'Message.Text.MissingParameters') as String)
+Index: grails-app/views/monitoringManager/_jobMonitoring.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/monitoringManager/_jobMonitoring.gsp	(revision 9531)
++++ grails-app/views/monitoringManager/_jobMonitoring.gsp	(revision )
+@@ -2,6 +2,8 @@
+ 	<li class="active"><a data-toggle="tab" data-index="1" href="#chartsTab" data-ng-click="activeTabIndex = 1">&nbsp; Charts</a></li>
+ 	<li><a data-toggle="tab" data-index="2" href="#monitorsTab" data-ng-click="activeTabIndex = 2">&nbsp; Monitors</a></li>
+ </ul>
++
++%{--tabs content--}%
+ <div class="tab-content">
+     <div class="tab-pane fade in active chart-tab" id="chartsTab">
+ 
+@@ -26,7 +28,7 @@
+ 
+     <div class="tab-pane fade chart-tab" id="monitorsTab">
+         <div class="monitors-items">
+-            <div class="table-wrapper" ng-show="jobMonitors.length" ng-cloak>
++            <div class="table-wrapper">
+                 <div class="table-wrapper-scrollable">
+                     <table class="table-minimal" id="monitorsTable" resize-columns>
+                         <thead>
+@@ -58,7 +60,7 @@
+                         </tr>
+                         </thead>
+                         <tbody>
+-                        <tr data-ng-repeat="monitor in jobMonitors | orderBy:predicate:reverse" on-finish-render>
++                        <tr data-ng-repeat="monitor in jobMonitors | orderBy:predicate:reverse">
+                             <td>
+                                 {{monitor.name}}
+                             </td>
+@@ -86,9 +88,9 @@
+                     </table>
+                 </div>
+             </div>
+-            <div class="no-monitors" ng-show="!jobMonitors.length" ng-cloak>
+-                <h1 class="centered-msg"><g:message code="Message.Text.MonitoringJobHasNoMonitors"/></h1>
+-            </div>
++            %{--<div class="no-monitors" ng-if="!jobMonitors.length">--}%
++                %{--<h1 class="centered-msg"><g:message code="Message.Text.MonitoringJobHasNoMonitors"/></h1>--}%
++            %{--</div>--}%
+         </div>
+ 
+         <div class="monitors-buttons">
+\ No newline at end of file
+Index: grails-app/views/simulation/_postPpsRun.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/simulation/_postPpsRun.gsp	(revision 9531)
++++ grails-app/views/simulation/_postPpsRun.gsp	(revision )
+@@ -2,7 +2,12 @@
+ <g:if test="${Settings.postProcessingSettings.ppsRunModules.size()}">
+     <div class="input-group input-group-sm pps-blue-module">
+         <span class="input-group-addon">Module:</span>
+-        <g:select name="ppsSelect" ng-model="selectedModule" class="form-control" from="${Settings.postProcessingSettings.ppsRunModules.collect {k,v -> v + ' (' + new File(k).name + ')'}}" keys="${Settings.postProcessingSettings.ppsRunModules*.key}" ng-init="selectedModule='${Settings.postProcessingSettings.ppsModuleInfo.modulePath}'"/>
++        <g:select name="ppsSelect"
++                  ng-model="selectedModule"
++                  class="form-control"
++                  from="${Settings.postProcessingSettings.ppsRunModules.collect {k,v -> v + ' (' + new File(k).name + ')'}}"
++                  keys="${Settings.postProcessingSettings.ppsRunModules*.key}"
++                  ng-init="selectedModule = '${Settings.postProcessingSettings.ppsModuleInfo.modulePath}'"/>
+         <span class="input-group-addon">
+             <input name="postProcessingSettings.isTestRun" type="checkbox"> Test Run
+         </span>
+@@ -18,7 +23,7 @@
+                 <button class="btn btn-default btn-danger animate-switch"
+                         ng-switch-when="${module.key}"
+                         type="button"
+-                        data-ng-click="saveAsPpsBlueModule('${module.key}', '${Settings.common.runFineDir}', '${module.value}', ppsBlueVersion)">
++                        data-ng-click="saveAsPpsBlueModule('${module.key}', '${Settings.common.runFineDir}', ppsBlueVersion, '${module.value}')">
+                     <i class="glyphicon glyphicon-floppy-save"></i>
+                     Save As
+                 </button>
+\ No newline at end of file
+Index: grails-app/views/simulation/_simulationAdvancedForm.gsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- grails-app/views/simulation/_simulationAdvancedForm.gsp	(revision 9531)
++++ grails-app/views/simulation/_simulationAdvancedForm.gsp	(revision )
+@@ -50,9 +50,6 @@
+                     </div>
+                     <div class="col-xs-2">
+                         <div class="value">
+-                            <div class="input-group input-group-sm"
+-                                 ng-init="insightVersion='${Settings.advanced.insightVersion}'">
+-                                <input type="text" name="advanced.insightVersion" id="insightVersion" class="form-control input-sm"
+                             <div class="input-group input-group-sm">
+                                 <g:textField name="advanced.insightVersion"
+                                              id="insightVersion"
+\ No newline at end of file
