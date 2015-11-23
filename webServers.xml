@@ -1,0 +1,13 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="11079898-cd07-4e86-9e9f-1a55f557471b" name="forrest.od.ua" url="http://forrest.od.ua/">
+        <fileTransfer host="vh070707.hosting.ua" port="21" rootFolder="/forrest.od.ua" password="dfe4df9cdfc2dfccdfcfdff0dfc9dfd9dfd0dfdd" username="alexander">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</application>
