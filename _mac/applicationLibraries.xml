@@ -1,5 +1,16 @@
 <application>
   <component name="libraryTable">
+    <library name="google-drive-realtime-api-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_borisyankov_DefinitelyTyped_raw_master_google-drive-realtime-api_google-drive-realtime-api.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_borisyankov_DefinitelyTyped_raw_master_google-drive-realtime-api_google-drive-realtime-api.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="grails-3.0.9">
       <CLASSES>
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-async-3.0.9.jar!/" />
@@ -179,132 +190,6 @@
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.yaml/snakeyaml/jars/snakeyaml-1.14.jar!/" />
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/xalan/serializer/jars/serializer-2.7.2.jar!/" />
       </CLASSES>
-      <JAVADOC>
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-async-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-bootstrap-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-compat-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-console-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-core-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-databinding-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-docs-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-encoder-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-gradle-model-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-gradle-plugin-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-gsp-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-logging-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-async-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-codecs-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-controllers-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-converters-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-databinding-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-datasource-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-domain-class-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-events-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-filters-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-gsp-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-i18n-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-interceptors-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-mimetypes-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-rest-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-services-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-testing-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-url-mappings-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-plugin-validation-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-shell-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-spring-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-taglib-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-test-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-validation-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-boot-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-common-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-databinding-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-fileupload-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-gsp-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-gsp-taglib-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-jsp-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-mvc-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-sitemesh-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-taglib-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-web-url-mappings-3.0.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/cglib/cglib/jars/cglib-2.2.2-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/com.googlecode.javaewah/JavaEWAH/jars/JavaEWAH-0.7.9-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/com.h2database/h2/jars/h2-1.3.176-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/com.jcraft/jsch/jars/jsch-0.1.50-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/com.lowagie/itext/jars/itext-2.0.8-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/com.netflix.nebula/gradle-extra-configurations-plugin/jars/gradle-extra-configurations-plugin-2.2.0-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/commons-codec/commons-codec/jars/commons-codec-1.6-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/io.projectreactor/reactor-core/jars/reactor-core-2.0.6.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/io.projectreactor/reactor-stream/jars/reactor-stream-2.0.6.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/jline/jline/jars/jline-2.12-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/junit/junit/jars/junit-4.12-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/net.java.dev.jna/jna/jars/jna-4.0.0-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/net.sf.jopt-simple/jopt-simple/jars/jopt-simple-4.6-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.ant/ant/jars/ant-1.9.4-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.httpcomponents/httpclient/jars/httpclient-4.2.6-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.httpcomponents/httpcore/jars/httpcore-4.2.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.ivy/ivy/jars/ivy-2.3.0-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.maven/maven-aether-provider/jars/maven-aether-provider-3.2.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.maven/maven-model/jars/maven-model-3.2.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.maven/maven-model-builder/jars/maven-model-builder-3.2.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.maven/maven-repository-metadata/jars/maven-repository-metadata-3.2.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.maven/maven-settings/jars/maven-settings-3.1.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.apache.maven/maven-settings-builder/jars/maven-settings-builder-3.1.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.gpars/gpars/jars/gpars-1.2.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy/jars/groovy-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-ant/jars/groovy-ant-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-console/jars/groovy-console-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-groovydoc/jars/groovy-groovydoc-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-groovysh/jars/groovy-groovysh-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-jmx/jars/groovy-jmx-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-sql/jars/groovy-sql-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-swing/jars/groovy-swing-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-templates/jars/groovy-templates-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.groovy/groovy-xml/jars/groovy-xml-2.4.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.jsr166-mirror/jsr166y/jars/jsr166y-1.7.0-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.plexus/plexus-classworlds/jars/plexus-classworlds-1.2-alpha-10-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.plexus/plexus-component-annotations/jars/plexus-component-annotations-1.5.5-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.plexus/plexus-interpolation/jars/plexus-interpolation-1.19-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.codehaus.plexus/plexus-utils/jars/plexus-utils-3.0.17-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-api/jars/aether-api-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-connector-basic/jars/aether-connector-basic-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-impl/jars/aether-impl-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-spi/jars/aether-spi-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-transport-file/jars/aether-transport-file-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-transport-http/jars/aether-transport-http-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.aether/aether-util/jars/aether-util-0.9.1.v20140329-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.eclipse.jgit/org.eclipse.jgit/jars/org.eclipse.jgit-3.5.2.201411120430-r-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.fusesource.jansi/jansi/jars/jansi-1.11-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.grails/grails-gdoc-engine/jars/grails-gdoc-engine-1.0.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.hamcrest/hamcrest-library/jars/hamcrest-library-1.3-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.json/json/jars/json-20140107-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.jsoup/jsoup/jars/jsoup-1.7.3-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.mockito/mockito-core/jars/mockito-core-1.10.19-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.objenesis/objenesis/jars/objenesis-1.4-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.objenesis/objenesis/jars/objenesis-2.1-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.10-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.slf4j/slf4j-api/jars/slf4j-api-1.7.10-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.slf4j/slf4j-api/jars/slf4j-api-1.7.12-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.slf4j/slf4j-simple/jars/slf4j-simple-1.7.10-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.sonatype.plexus/plexus-cipher/jars/plexus-cipher-1.4-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.sonatype.plexus/plexus-sec-dispatcher/jars/plexus-sec-dispatcher-1.3-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.spockframework/spock-core/jars/spock-core-1.0-groovy-2.4-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.spockframework/spock-spring/jars/spock-spring-1.0-groovy-2.4-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework/spring-context-support/jars/spring-context-support-4.1.5.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework/spring-core/jars/spring-core-4.1.7.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework/spring-jdbc/jars/spring-jdbc-4.1.7.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework/spring-test/jars/spring-test-4.1.7.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework/springloaded/jars/springloaded-1.2.4.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework.boot/spring-boot-cli/jars/spring-boot-cli-1.2.6.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework.boot/spring-boot-dependency-tools/jars/spring-boot-dependency-tools-1.2.6.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework.boot/spring-boot-gradle-plugin/jars/spring-boot-gradle-plugin-1.2.6.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.springframework.boot/spring-boot-loader-tools/jars/spring-boot-loader-tools-1.2.6.RELEASE-javadoc.jar!/" />
-        <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.yaml/snakeyaml/jars/snakeyaml-1.14-javadoc.jar!/" />
-      </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-async-3.0.9-sources.jar!/" />
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-bootstrap-3.0.9-sources.jar!/" />
