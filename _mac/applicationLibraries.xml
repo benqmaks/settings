@@ -9,7 +9,6 @@
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_borisyankov_DefinitelyTyped_raw_master_google-drive-realtime-api_google-drive-realtime-api.d.ts" />
       </CLASSES>
-      <JAVADOC />
       <SOURCES />
     </library>
     <library name="grails-3.0.9">
@@ -191,7 +190,6 @@
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/org.yaml/snakeyaml/jars/snakeyaml-1.14.jar!/" />
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/lib/xalan/serializer/jars/serializer-2.7.2.jar!/" />
       </CLASSES>
-      <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-async-3.0.9-sources.jar!/" />
         <root url="jar://$USER_HOME$/Work/SDK/grails-3.0.9/dist/grails-bootstrap-3.0.9-sources.jar!/" />
