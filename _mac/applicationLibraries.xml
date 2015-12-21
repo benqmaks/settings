@@ -1,11 +1,17 @@
 <application>
   <component name="libraryTable">
-    <library name="google-drive-realtime-api-DefinitelyTyped" type="javaScript">
+    <library name="client" type="javaScript">
       <properties>
         <sourceFilesUrls>
-          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_borisyankov_DefinitelyTyped_raw_master_google-drive-realtime-api_google-drive-realtime-api.d.ts" />
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_apis.google.com_js_client.js" />
         </sourceFilesUrls>
       </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_apis.google.com_js_client.js" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="google-drive-realtime-api-DefinitelyTyped" type="javaScript">
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_borisyankov_DefinitelyTyped_raw_master_google-drive-realtime-api_google-drive-realtime-api.d.ts" />
       </CLASSES>
