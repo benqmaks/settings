@@ -9,7 +9,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="4970201a-45a7-4b29-be7d-038c4aaec1c9" name="comegetso.me" url="http://comegetso.me">
-        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/html" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
