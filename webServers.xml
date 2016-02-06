@@ -15,6 +15,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="81f63945-54fa-4568-9dac-025b87f4d414" name="salemix.comegetso.me" url="http://salemix.comegetso.me">
+        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/salemix.comegetso.me" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </application>
