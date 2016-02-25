@@ -29,6 +29,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="1fcd2b45-1a1d-44c5-b9ee-842a2dd28f65" name="test.comegetso.me" url="http://comegetso.me">
+        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/test.comegetso.me" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </application>
