@@ -18,11 +18,11 @@
         </fileTransfer>
       </webServer>
       <webServer id="81f63945-54fa-4568-9dac-025b87f4d414" name="salemix.comegetso.me" url="http://salemix.comegetso.me">
-        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/salemix.comegetso.me" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/salemix.comegetso.me" password="df9bdf98df99df9fdf92df9adfcbdfd9dfeedfec" username="benqmaks">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
-          <option name="port" value="22" />
+          <option name="port" value="21" />
         </fileTransfer>
       </webServer>
       <webServer id="6a5a4f1e-36f5-4eda-a93a-0c4f802064c5" name="yourgamingbets.com" url="http://comegetso.me">
