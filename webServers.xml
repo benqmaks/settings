@@ -6,6 +6,7 @@
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="21" />
         </fileTransfer>
       </webServer>
       <webServer id="4970201a-45a7-4b29-be7d-038c4aaec1c9" name="crm.comegetso.me" url="http://crm.comegetso.me">
@@ -13,13 +14,15 @@
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
       <webServer id="81f63945-54fa-4568-9dac-025b87f4d414" name="salemix.comegetso.me" url="http://salemix.comegetso.me">
-        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/salemix.comegetso.me" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/salemix.comegetso.me" password="df9bdf98df99df9fdf92df9adfcbdfd9dfeedfec" username="benqmaks">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="21" />
         </fileTransfer>
       </webServer>
       <webServer id="6a5a4f1e-36f5-4eda-a93a-0c4f802064c5" name="yourgamingbets.com" url="http://comegetso.me">
@@ -27,6 +30,7 @@
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
       <webServer id="1fcd2b45-1a1d-44c5-b9ee-842a2dd28f65" name="test.comegetso.me" url="http://comegetso.me">
@@ -34,6 +38,15 @@
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="af735349-f55a-45a3-873b-bde5ca005109" name="fincentr.lg.ua" url="http://fincentr.lg.ua/">
+        <fileTransfer host="sportp26.ftp.ukraine.com.ua" port="21" rootFolder="/fincentr.lg.ua/www" password="df93dffddf9ddfcddfc0df9ddfd3dfce" username="sportp26_ftp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
         </fileTransfer>
       </webServer>
     </option>
