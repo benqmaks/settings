@@ -49,6 +49,14 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
+      <webServer id="499b8d32-a0dd-4cc3-a571-455bb31ac602" name="comegetso.me" url="http://salemix.comegetso.me">
+        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/comegetso.me" password="df9bdf98df99df9fdf92df9adfcbdfd9dfeedfec" username="benqmaks">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </application>
