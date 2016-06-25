@@ -121,7 +121,7 @@
     </filter>
   </component>
   <component name="NodeLocalInterpreterManager">
-    <node-interpreter path="/usr/local/bin/node" version="0.12.0" last-modified="1423655011000" />
-    <node-interpreter path="/usr/local/Cellar/node/0.12.0/bin/node" version="0.12.0" last-modified="1423655011000" />
+    <node-interpreter path="/usr/local/bin/node" version="6.2.0" last-modified="1463514205000" />
+    <node-interpreter path="/usr/local/Cellar/node/0.12.0/bin/node" version="(Does not exist)" last-modified="1466874716112" />
   </component>
 </application>
