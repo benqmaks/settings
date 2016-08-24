@@ -2,7 +2,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="5370b476-d95e-493c-90fa-482fdd06b7b5" name="weis_hosting" url="http://vh070707.hosting.ua">
-        <fileTransfer host="vh070707.hosting.ua" port="21" password="dfe4df9cdfc2dfccdfcfdff0dfc9dfd9dfd0dfdd" username="alexander">
+        <fileTransfer host="vh070707.hosting.ua" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -10,7 +10,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="4970201a-45a7-4b29-be7d-038c4aaec1c9" name="crm.comegetso.me" url="http://crm.comegetso.me">
-        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/crm.comegetso.me" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/crm.comegetso.me" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -18,7 +18,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="81f63945-54fa-4568-9dac-025b87f4d414" name="salemix.comegetso.me" url="http://salemix.comegetso.me">
-        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/salemix.comegetso.me" password="df9bdf98df99df9fdf92df9adfcbdfd9dfeedfec" username="benqmaks">
+        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/salemix.comegetso.me">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -26,7 +26,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="6a5a4f1e-36f5-4eda-a93a-0c4f802064c5" name="yourgamingbets.com" url="http://comegetso.me">
-        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/yourgamingbets.com" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/yourgamingbets.com" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -34,7 +34,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="1fcd2b45-1a1d-44c5-b9ee-842a2dd28f65" name="test.comegetso.me" url="http://comegetso.me">
-        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/test.comegetso.me" accessType="SFTP" password="dfcddfc2dfc8dfcedfdedfc4dfdcdfc8dfc2" username="root">
+        <fileTransfer host="46.101.143.105" port="22" rootFolder="/var/www/test.comegetso.me" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -42,7 +42,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="af735349-f55a-45a3-873b-bde5ca005109" name="fincentr.lg.ua" url="http://fincentr.lg.ua/">
-        <fileTransfer host="sportp26.ftp.ukraine.com.ua" port="21" rootFolder="/fincentr.lg.ua/www" password="df93dffddf9ddfcddfc0df9ddfd3dfce" username="sportp26_ftp">
+        <fileTransfer host="sportp26.ftp.ukraine.com.ua" port="21" rootFolder="/fincentr.lg.ua/www">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -50,7 +50,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="499b8d32-a0dd-4cc3-a571-455bb31ac602" name="comegetso.me" url="http://salemix.comegetso.me">
-        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/comegetso.me" password="df9bdf98df99df9fdf92df9adfcbdfd9dfeedfec" username="benqmaks">
+        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/comegetso.me">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
@@ -58,5 +58,8 @@
         </fileTransfer>
       </webServer>
     </option>
+  </component>
+  <component name="webServersAuthStorage">
+    <data>AAADQFZVfBJXCmUQuft91Kjii+sgKlPGQqH+1uTBMq5kenbjKg4YtBL36LUMxvAUFFG5bjPZv1FinOKS98OuUbdCmc2yuR4c6GbZjZVuB3F45Vpw0CH10PRh2AohjMSuOCKWaYRas12GqhC6KDAkEmP9f4PomPL6e2RZoS5pxOmO/GW7rXAqLKvAdYhs/X2ZWtUX1IuC+IK7UdxuEg3k2ZC7kW59JMLTTlcxBSvjJn2OYnZgFlcgRPwGPmxZTje+tC1/S56orB6UAim8FGNa7Y20NT2bsB5Pc8DTtCt+6twMUflNxKfA4Sjq2HjL6DrKVPWKGPERByXs5AWGDabO9ltL7Qi8Kc4Ix0WMtN9HlATnSiKz1EqLJgBjgNsljkNZI4LZPanh0qpFLEh5gsAaoZKKdgt2Dnc5wTLgaCDub/PY48GW9hmCvtBoWbzfJf7oO7QLsjzvhhBQt51R1a8R8JX9LhqFCt1W5pt9wk0+tnXdiQfSvco1vAd/3TAJTB7TAJuHA5nEYQQSOrY7gnh2CbPYzLQGJKRhRwu/t5zhYIpyOOmI4BUyRxNcnUeBRcDWgB6R6eJJ4GRiWJ4Ghv6XcvRoAvcbCaizJvRJ8164PpOEShm5SUXo+AYQsuSPcLKezpmuSBkgwy2u5KOHWR8ejCM29if3iBATwwtLel0N7RZ5Ol4Y73D4JvbvWLnIo1EuASFqDejz1d82k2jB4KdLpDTUFdsP1DrkYqD8MyK6lvL3FXiuUZ73nuUem/ROz2X05eBMRGYZCkhjKbT1UCKQNzLP5U0qViC2pHn0eGH9n9oTys+M3yAUVBkK61igcg3lFKdFlpnQ9lIaKq4iuYBzx+LTzeA1FkbAHgETSzlDUC+F++19Cc9big0s1jD9C+D4igzJokSKpspG2rSazODxWyLJ3SfFObY+zd6pfVimVgYms4ItXM2TXzzNd1I4SBP7d9BPPo+1aFAM0J30y0O85STpgkgFSpQZFxTciMRActxPREwR2MKDRWpv8WXZ0Zkxx3C2NCkGFOrS6wDLbZLfJNkpdcKcM5ZNA+RVtoHQRWxz/WyJsM1zN/PZ+I5lFWCxpj37yW96ZTeqqEdrA7PZ1wHJbZgImnWXSbfZnd2bKIJaz8H1</data>
   </component>
 </application>
