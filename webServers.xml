@@ -65,9 +65,17 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
+      <webServer id="84e889cd-8fb6-4815-b001-0777ec87e961" name="rostemo.online" url="http://rostemo.online">
+        <fileTransfer host="vh24.hosting.ua" port="21" rootFolder="/rostemo.online">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAADsJfjqJushv3odFHF+nRSeYlxN2EqpUCz0JoNWy19GM0HaljWceCYRvvdUFKzaqsLS8ikDm7Wt167Q9msXYxpej6KO/+zFsRYwmCOKKWDAgs9ofqM4mUnKigWDJUzwTJhMGeXmERsWSFrzSZE/utTorKLOzm+ehejEijvhRbZt/RY9dJ8EEduoTAROwhz5F0ZjcABbXZfZ+4A3AKmBLdIzsYMF+/bojJJUz0cmfOIhe13TiCWp8qR/k6IQHmhG4RIzET5cxuqKXzohLTUBR2pEsBUgAdngjJnaM5l8t1jV7j5cv2Po9jvgL8YdDLxcEOzl4xmqUoVikzMviUDmwYSv375+b1nLnhzRXriyK36/8BuFOIlfuGxkzd7ZaLWEQozLQEgwgYlSDxyYn7dvjs3oW6kXzWa4MM44S/YzfAM6rIU2EzKMdRTrF9XxH6UQZ2I0LJpGgLd4bF5j2DvyCLOl5tBgEbqjQBkmHBhDWAejM/Gl9ZaBL/OpJugoSSAaKk84rLWOeqakAL7yV8HKD9AOgq/pdNtbYztGL19ITMbKgpDEyiTB2SHzFfqpDPwLX5Sps3MfPOgjlx1u6S5bWFY1Ot03hk0BNyvfpwYuUEG9ogavHqCuupmMtkNlepQeE+hk+ZmLl1QljYjG7qIG1f2kcFHoNs7fs2ACKuSpmeiafvLzf+8FWEKMu0TY1CaLfvlvvkMHB+JoqqeYAjP2l31fvYV9IVQlCwb2/kxeuqXxHImYqHB1M86QYBTH4Yx0s30HuNlnCb2P+s+s4zhAZyyctN8Hs5qp5I+E0c9dE16hW6a8DrWFR6ThOzjbFEUFDCdBddXFK7Zx8dzfx8YxIW7BPWD2b7ifIzUGgBeWde6WPUKQkTLYiPOxRt8IzXQxjeCkYyYNkDuptG2/DdMBwQYW0CTax0YmHZPOGdPuKOX7OmzU+L8lX1JlqtQ2TYNTKoXaNyIlEt0LPx7eQLZutMc7klrFEvsTOgytKtcBhx7YrBkq2NJBiflLoSI37c8CyMuYy0vjXvqiV16c4nbmFIyyu4Dv+LWj1galVb9sh4oZ9aXqqzX+9YF30tk4pczX7Mt5tQab/t+aSf5Cqc2aBTEmTJyyHUO+e3rwoPpo4Aci7RnN9JJAuHhq5i37rkueUe8OmEbYfal0mOo2jCG9de2dGs1T3CENvxdcqPztqvJ+lyb5J+qmX8NuwW+BhbL1WsbF8U6Zrup43h6rpFnQNys4Gc6eVBgcWa4f9rd5GbOu/dsEKYmiHGmJ7GwXOFd/8W3RA==</data>
+    <data>AAAEIDLiRSLOsUWJKCD1SUeEImezvemkRPz/Vx0N+xZU2pqiFX7T3g9LkgmFrqtKPa8f0TzVMUtFFJ2JWjzQuzGv60LDnNiijt2r+cj1/NAYv7EJ2cseQqxfFCjoS0VTsoqF4t/umSpoO+K8svg0Gfj7g+93R/HnQul/16EK4fP/gtKa7VGgo4Ywxr+l51HGo4IS91VzxdO/DA8ELg+cW1GBek9+nu4PbqFjtbbG0aR3LEybmpeqGqmBB+9Qv9nmEPpu1SOVtS7Oc8R8Q/Q/9t0Xg2koFfjJkaWzjkVpvXWp3GkzjwXGXRuFnQqfqh29NYhvGxvZBNeJvKLy1+frmef10G9sa49kR0ID5IFmy3bg9nazpOQs6XqP4hLuq98mNqj2lIQE/0mMBnHLw8f+skSWXA253P7cNXaFxDqcyOl7X5JyLddvH6nm8ak8cBKLONRKS2sU4s9AWoiJwTt3yGXMMCJp1SLcY70Ymu5LuDd5fKqWAtIDfipNvrJMMygUQD3/F/4gnofx4KS4Az2ptBaOuZzHYrRNQobXBec7odFOcmrErzdn2lXkgDfJoLmutJCZ5WFem/c+WWiKJLMlY9vaYsvf/+zDyLUQS893V/EWxUKLCZa5NkZv01P1yILynkAlqJNIXBTId1VA+rebiwFt61WUk5JNQwefaE6UbE/8F/8fuRG9PsN3kTdIcNvMn7gbcrofggUZHlv+jRmTuyKDH56indq1GURK/IUMXqc6j07nslAkshpLEV0ouWMTiNTmeMRJZ+IcWxQv0iSAc3ZxqSEIykr00un4JpdsJFuA4klXI2dS7tVLGZ6jrP/06xsJKbMVvQKuoYvP9nccjp+rV2YFno93BaYM8fH169f+IWojtNCqu+WB8wpEE217A6aCfchtIdy5DqFGkMNcRTvgnyCsZkcV2lin8s0QV07uEgX/osPDvVTNaiWvQfxIBgXpNg47a0G1OvyWUMsvsdq2dChVjyoDAZBmVF7UIixW5Pq50B040hLR/y+nj6DzLqgIjARM/8jpLuZrtmJerPuyOoaova77Y4+e2t6JrRZoJ9c7dYxLdsVu6Je5rtZwUIh55ug/x2Pu1YdKl8ZtxG+RxpW5WHtvRVQicT3r99Kn9OHPIj7kwX8wRwwJPxEJXQaB0wS5TxSZdS1SJDwJNblPK0CKsbTI1y3dOw3iPg5D4xtvUYxXA/45Ad3+shuEXSxxvQdhVP0253fWZN196bhDIXhLaor2TmToIxuYJxxo5kacejwFCeLgm6rF1No+rbgvIaHVTZwb4yo86+L5q3vr3DGUk3FOsuLGXXfEeWCzG6mAYVG4nX28oqRTHIzq8RrTR1ncrwyP0JbwLOvcNqSH3HaDMjBBdxs1rbv5AknFcHxVT0Vu9sBrAqa3kMhGsBmp+rpa1o3WUbcFWa3cqXpDO+4=</data>
   </component>
 </application>
