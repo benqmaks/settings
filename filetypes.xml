@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern=".npmrc" type="PLAIN_TEXT" />
       <mapping pattern=".browserslistrc" type="PLAIN_TEXT" />
+      <mapping pattern="FormPSGroup" type="TypeScript" />
     </extensionMap>
   </component>
 </application>
