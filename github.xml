@@ -1,4 +1,9 @@
 <application>
+  <component name="GithubAccounts">
+    <account id="012fa7c4-79c6-431f-b95c-a9550382fcb7" name="benqmaks">
+      <server host="github.com" />
+    </account>
+  </component>
   <component name="GithubSettings">
     <option name="LOGIN" value="benqmaks" />
     <option name="AUTH_TYPE" value="BASIC" />
